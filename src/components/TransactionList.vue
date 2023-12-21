@@ -8,19 +8,16 @@
     </ul>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            transactions: [
-                { id: 1, text: "Grocery", amount: -250.85 },
-                { id: 2, text: "Salary", amount: 4000.0 },
-                { id: 3, text: "Book", amount: -400.5 },
-                { id: 4, text: "Fund Investment", amount: 400.2 },
-            ],
-        };
+<script setup>
+
+import { defineProps } from "vue";
+
+const props = defineProps({
+    transactions: {
+        type: Array,
+        required: true,
     },
-};
+});
 </script>
 
 <style></style>
