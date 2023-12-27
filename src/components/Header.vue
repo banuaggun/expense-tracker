@@ -1,4 +1,6 @@
 <template>
-  <h1>Expense Tracker</h1>
+  <div class="header">
+    <span>Expense Tracker</span>
+  </div>
 </template>
 
