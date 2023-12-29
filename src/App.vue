@@ -1,9 +1,15 @@
 <template>
-    <Header />
-    <div class="container">
-        <Balance :total="total" />
-        <IncomeExpenses :income="income" :expenses="expenses" />
-        <TransactionList :transactions="transactions" />
+    <div class="content">
+        <Header />
+        <div class="container">
+            <div class="container-left">
+                <Balance :total="total" />
+                <IncomeExpenses :income="income" :expenses="expenses" />
+            </div>
+            <div class="container-right">
+                <TransactionList :transactions="transactions" />
+            </div>
+        </div>      
     </div>
 </template>
 

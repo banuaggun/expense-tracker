@@ -1,7 +1,16 @@
 <template>
-  <span>Your Balance</span>
-  <br/><br/>
-  <span id="balance">${{total}}</span>
+  <div>
+    <div class="balance">
+      <div class="balance-header">
+        <span>Your Balance</span>
+      </div>
+      <div class="balance-total">
+        <span id="balance">${{total}}</span>
+      </div>
+    </div>
+  </div>
+
+  
 </template>
 
 <script setup>
