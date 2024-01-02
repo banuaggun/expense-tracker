@@ -2,13 +2,22 @@
     <div class="content">
         <Header />
         <div class="container">
+
             <div class="container-left">
-                <Balance :total="total" />
-                <IncomeExpenses :income="income" :expenses="expenses" />
+                <div class="container-left-row-1">
+                    <Balance :total="total" />
+                </div>
+                <div class="container-left-row-2">
+                    <IncomeExpenses :income="income" :expenses="expenses" />
+                </div>
             </div>
+
             <div class="container-right">
-                <TransactionList :transactions="transactions" />
+                <div class="container-right-row">
+                    <TransactionList :transactions="transactions" />
+                </div>
             </div>
+            
         </div>      
     </div>
 </template>

@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="balance">
-      <div class="balance-header">
+      <div class="balance-content">
+        <div class="balance-content-header">
         <span>Your Balance</span>
       </div>
-      <div class="balance-total">
+      <div class="balance-content-total">
         <span id="balance">${{total}}</span>
       </div>
+      </div>    
     </div>
   </div>
-
-  
 </template>
 
 <script setup>
@@ -23,3 +23,4 @@ const props = defineProps({
   }
 })
 </script>
+

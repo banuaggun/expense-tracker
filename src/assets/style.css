@@ -14,6 +14,82 @@ body{
   border:1px solid blue;
 }
 
+ul li{
+  list-style:none;
+}
+
+
+.content{
+  width:100%;
+  height:100vh;
+}
+.container{
+  height:calc(100vh - 90px);
+  display:flex;
+  align-content:center;
+  justify-content: space-between;
+}
+.container-left,
+.container-right{
+  width:50%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-left-row-1{
+  display: flex;
+  justify-content: center;
+  width:100%;
+  margin:0 0 30px 0;
+}
+
+.container-right-row{
+  display:flex;
+  justify-content: space-around;
+  width:100%;
+}
+
+
+.area,
+.balance{
+  width:100%;
+  position:relative;
+}
+
+.area-content{
+  display: flex;
+  justify-content:space-around;
+}
+
+.area-content-income,
+.area-content-expenses,
+.balance-content{
+  min-width:300px;
+  padding:30px 10px;
+  background-color: rgba(30, 144, 255, 0.36);
+  border-radius: 8px;
+}
+
+.area-content-income-header,
+.area-content-expenses-header,
+.balance-content-header{
+  font-size:1.2rem;
+  font-weight: 500;
+  color:rgba(36, 36, 36, 0.7);
+  margin:10px 0;
+}
+.area-content-income-total,
+.area-content-expenses-total,
+.balance-content-total{
+  font-size:1.2rem;
+  font-weight: 600;
+  color:rgba(36, 36, 36, 1);
+  margin:10px 0;
+}
+
+/*
+
+
 .content{
   width:calc(100% - 80px);
   margin:0 40px 0 40px;
@@ -22,17 +98,18 @@ body{
 }
 
 .container{
-  display: grid;
-  width:calc(100% - 40px);
-  grid-template-columns: 30% 70%;
-  grid-template-rows: 1fr;
-  column-gap:40px;
+  display: flex;
+  flex-direction: column;
 }
 
-.container-left{
+.container-top{
   border:1px solid pink;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-between;
 }
-.container-right{
+.container-bottom{
   border:1px solid red;
 }
 
@@ -52,8 +129,9 @@ body{
   border:1px solid red;
 }
 
-.balance{
-  width:80%;
+.balance,
+.area{
+  width:100%;
   border-radius:12px;
   display: flex;
   flex-direction: column;
@@ -62,19 +140,44 @@ body{
   box-shadow:0px 2px 4px rgba(135, 144, 145, 0.4);
 }
 
-.balance-header{
+.balance-header,
+.area-income-header,
+.area-expenses-header,
+.transaction-list-header{
   margin:30px 20px;
   font-size:14px;
   font-weight:500;
   color:rgb(39, 38, 38);
   letter-spacing: 0.6px;
-  border:1px solid red;
 }
 
-.balance-total{
+.balance-total,
+.area-income-total,
+.area-expenses-total{
   margin:0 20px 30px 20px;
-  border:1px solid blue;
   text-align:center;
   font-size:36px;
   font-weight: 600;
 }
+
+.transaction-list{
+  margin:20px;
+  border:1px solid green;
+}
+
+.transaction-list-area{
+  border:1px solid black;
+  margin:20px 0 20px 0; 
+}
+
+.transaction-list-area ul li .item{
+  margin:0 20px 20px 0;
+  height:44px;
+  min-width:100%;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows:1fr;
+  column-gap:40px;
+}
+
+*/
