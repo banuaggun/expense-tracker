@@ -8,7 +8,7 @@
                     <Balance :total="total" />
                 </div>
                 <div class="container-left-row-2">
-                    <IncomeExpenses :income="income" :expenses="expenses" />
+                    <IncomeExpenses :income="+income" :expenses="+expenses" />
                 </div>
             </div>
 
