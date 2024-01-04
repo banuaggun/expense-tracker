@@ -50,3 +50,60 @@ const onSubmit = () => {
   amount.value='';
 }
 </script>
+
+
+<style scoped>
+.add{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+}
+
+.add-header{
+  font-weight:600;
+
+}
+.add-form{
+  margin:20px auto;
+}
+
+.add-form-control{
+  display: flex;
+  flex-direction: column;
+  margin:16px auto;
+}
+
+.add-form-control label{
+  margin-bottom:8px;
+  text-transform: uppercase;
+  font-weight:600;
+
+}
+
+.add-form-control input{
+  width:100%;
+  height:44px;
+  border:none;
+  outline:none;
+  border-radius:4px;
+  border-bottom:4px solid cadetblue;
+  background-color: whitesmoke;
+}
+
+.add-form-button{
+  display:flex;
+  justify-content: center;
+
+}
+.add-form-button button{
+  border:none;
+  outline:none;
+  padding:16px 0px;
+  width:80%;
+  border-radius:4px;
+  font-size:1.2rem;
+  font-weight:600;
+  text-transform: uppercase;
+  background-color: lightseagreen;
+}
+</style>
