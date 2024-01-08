@@ -6,11 +6,25 @@
             <span>Transaction History</span>
         </div>
          <div class="transaction-area-list">
-            <ul id="list" class="list">
-                <li v-for="transaction in transactions" :key="transaction.id">
+            <ul id="list-income" class="list-income">
+                <li v-for="transaction in transactions" v-show="transaction.amount > 0" :key="transaction.id">
+                  
                     <div class="item">
  <span>{{ transaction.text }}</span> 
                     <span>${{ transaction.amount }}</span>
+                    <button @click="deleteTransaction(transaction.id)" class="delete-button">X</button>
+                    </div>
+                   
+                </li>
+            </ul>
+        </div>
+        <div class="transaction-area-list">
+            <ul id="list-expenses" class="list-expenses">
+                <li v-for="transaction in transactions" v-show="transaction.amount < 0" :key="transaction.id">
+                  
+                    <div class="item">
+ <span>{{ transaction.text }}</span> 
+                    <span>${{ Math.abs(transaction.amount) }}</span>
                     <button @click="deleteTransaction(transaction.id)" class="delete-button">X</button>
                     </div>
                    
