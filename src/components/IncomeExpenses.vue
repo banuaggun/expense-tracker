@@ -3,21 +3,21 @@
         <div class="area">
             <div class="area-content">
                 <div class="area-content-income">
-                <div class="area-content-income-header">
-                    <span>Income</span>
+                    <div class="area-content-income-header">
+                        <span>Income</span>
+                    </div>
+                    <div class="area-content-income-total">
+                        <span>$ {{income}}</span>
+                    </div>
                 </div>
-                <div class="area-content-income-total">
-                    <span>$ {{income}}</span>
+                <div class="area-content-expenses">
+                    <div class="area-content-expenses-header">
+                        <span>Expenses</span>
+                    </div>
+                    <div class="area-content-expenses-total">
+                        <span>$ {{expenses}}</span>
+                    </div>
                 </div>
-            </div>
-            <div class="area-content-expenses">
-                <div class="area-content-expenses-header">
-                    <span>Expenses</span>
-                </div>
-                <div class="area-content-expenses-total">
-                    <span>$ {{expenses}}</span>
-                </div>
-            </div>
             </div>
         </div>
     </div>
@@ -37,3 +37,12 @@ const props = defineProps({
 });
 </script>
 
+<style scoped>
+.area-content{
+    border:1px solid blue;
+    display: grid;
+    grid-template-columns: repeat(2, 20rem);
+    grid-template-rows:1fr;
+    grid-gap:20px;
+}
+</style>

@@ -3,7 +3,7 @@
         <Header />
         <div class="container">
 
-            <div class="container-left">
+            <div class="container-top">
                 <div class="container-left-row-1">
                     <Balance :total="+total" />
                 </div>
@@ -86,3 +86,15 @@ const handleTransactionDeleted = (id) => {
     toast.success('Transaction Deleted');
 }
 </script>
+
+<style scoped>
+.container{
+    max-width:1100px;
+    margin:0 auto;
+}
+.container-top{
+    display:grid;
+    grid-template-columns: repeat(3, 20rem);
+    grid-gap:20px;
+}
+</style>

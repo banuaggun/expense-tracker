@@ -24,3 +24,9 @@ const props = defineProps({
 })
 </script>
 
+<style scoped>
+.balance{
+  border:1px solid red;
+  
+}
+</style>
