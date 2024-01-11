@@ -4,19 +4,23 @@
         <div class="container">
 
             <div class="container-top">
-                <div class="container-left-row-1">
+                <div class="container-top-col-1">
                     <Balance :total="+total" />
                 </div>
-                <div class="container-left-row-2">
-                    <IncomeExpenses :income="+income" :expenses="+expenses" />
+                <div class="container-top-col-2">
+                    <Income :income="+income" />
+                    
+                </div>
+                <div class="container-top-col-3">
+                    <Expenses :expenses="+expenses" />
                 </div>
             </div>
 
-            <div class="container-right">
-                <div class="container-right-row">
+            <div class="container-bottom">
+                <div class="container-bottom-col-1">
                     <AddTransaction @transactionSubmitted="handleTransactionSubmitted" />
                 </div>
-                <div class="container-right-row">
+                <div class="container-bottom-col-2">
                     <TransactionList @transactionDeleted="handleTransactionDeleted" :transactions="transactions" />
                 </div>
             </div>
@@ -28,21 +32,33 @@
 <script setup>
 import Header from "./components/Header.vue";
 import Balance from "./components/Balance.vue";
+import Income from './components/Income.vue';
+import Expenses from './components/Expenses.vue';
 import IncomeExpenses from "./components/IncomeExpenses.vue";
 import AddTransaction from "./components/AddTransaction.vue";
 import TransactionList from "./components/TransactionList.vue";
 
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { useToast } from "vue-toastification";
 
 const toast = useToast();
 
+const transactions = ref([]);
+
+onMounted(() => {
+    const savedTransactions = JSON.parse(localStorage.getItem('transactions'));
+    if(savedTransactions){
+        transactions.value = savedTransactions
+    }
+})
+/*
 const transactions = ref([
     { id: 1, text: "Grocery", amount: -250.85 },
     { id: 2, text: "Salary", amount: 4000.0 },
     { id: 3, text: "Book", amount: -400.5 },
     { id: 4, text: "Fund Investment", amount: 400.2 },
 ]);
+*/
 
 // total
 const total = computed(() => {
@@ -72,6 +88,7 @@ const handleTransactionSubmitted = (transactionData) => {
         text:transactionData.text,
         amount:transactionData.amount
     });
+    saveTransactionsToLocalStorage();
     toast.success('Transaction added');
 };
 
@@ -83,18 +100,30 @@ const generateUniqueId = () => {
 // delete transaction
 const handleTransactionDeleted = (id) => {
     transactions.value = transactions.value.filter((transaction) => transaction.id !== id);
+    saveTransactionsToLocalStorage();
     toast.success('Transaction Deleted');
+}
+
+// save to localStorage
+const saveTransactionsToLocalStorage = () => {
+    localStorage.setItem('transactions', JSON.stringify(transactions.value));
 }
 </script>
 
 <style scoped>
 .container{
-    max-width:1100px;
-    margin:0 auto;
+    border:1px solid blue;
+    max-width:1200px;
+    margin:20px auto;
 }
 .container-top{
     display:grid;
-    grid-template-columns: repeat(3, 20rem);
+    grid-template-columns: repeat(3, auto);
     grid-gap:20px;
+}
+.container-bottom{
+    display:grid;
+    grid-template-columns: min-content 1fr;
+    grid-gap:25px;
 }
 </style>
