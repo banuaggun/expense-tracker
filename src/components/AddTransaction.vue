@@ -55,6 +55,7 @@ const onSubmit = () => {
 <style scoped>
 .add{
   width:100%;
+  min-width:max-content;
   display:flex;
   flex-direction: column;
 }

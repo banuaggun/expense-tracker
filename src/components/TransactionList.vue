@@ -59,18 +59,6 @@ const deleteTransaction = (id) => {
 
 <style>
 .transaction{
-    width:100%;
-    position:relative;
+    border:1px solid green;
 }
-
-.transaction-area{
-    display:flex;
-    justify-content: space-around;
-}
-
-.transaction-area-list{
-    min-width:100%;
-    padding: 10px;
-}
-
 </style>
