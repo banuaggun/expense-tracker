@@ -1,7 +1,11 @@
-# Vue 3 + Vite
+# Expense Tracker
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is a web application that allows the user to manage their personal finances in a simple and effective way. The user can input their income and expenses in the corresponding fields and press the add button to update the table on the side. The table has two columns, one for income and one for expenses, and shows the total amounts on top. The application stores the data in the Local Storage of the browser, so the user can access it anytime until they clear the browser. I am planning to implement a user login feature in the future.
 
-## Recommended IDE Setup
+## Technologies & Libraries
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+> Vue 3
+
+> Vite
+
+> Vue Toastification
