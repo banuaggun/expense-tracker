@@ -34,7 +34,6 @@ import Header from "./components/Header.vue";
 import Balance from "./components/Balance.vue";
 import Income from './components/Income.vue';
 import Expenses from './components/Expenses.vue';
-import IncomeExpenses from "./components/IncomeExpenses.vue";
 import AddTransaction from "./components/AddTransaction.vue";
 import TransactionList from "./components/TransactionList.vue";
 
@@ -112,18 +111,17 @@ const saveTransactionsToLocalStorage = () => {
 
 <style scoped>
 .container{
-    border:1px solid blue;
-    max-width:1200px;
+    max-width:1100px;
     margin:20px auto;
 }
 .container-top{
     display:grid;
-    grid-template-columns: repeat(3, auto);
-    grid-gap:20px;
+    grid-template-columns: repeat(3, 340px);
+    justify-content:space-between;
 }
 .container-bottom{
     display:grid;
-    grid-template-columns: min-content 1fr;
-    grid-gap:25px;
+    grid-template-columns: 22rem auto;
+    grid-gap:20px;
 }
 </style>
