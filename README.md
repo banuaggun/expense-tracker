@@ -9,3 +9,5 @@ This is a web application that allows the user to manage their personal finances
 > Vite
 
 > Vue Toastification
+
+> Phosphor Icons
