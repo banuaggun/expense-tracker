@@ -7,14 +7,30 @@
       <div class="add-form">
         <form id="form" @submit.prevent="onSubmit">
           <div class="add-form-control">
-            <label for="text">Text</label>
+            <label for="text">
+              <span>
+                Income or Expense Name
+              </span>
+            </label>
             <input type="text" id="text" v-model="text" placeholder="Enter Text..." />
           </div>
           <div class="add-form-control">
             <label for="amount">
-              Amount
-              (negative - expense, positive - income)
+              <span>
+                Amount
+              </span>
+              <p>
+                <i>
+                  If it is an expense, write it as a negative value (-)
+                </i>
+              </p>
+              <p>
+                <i> 
+                  if it is a positive value, write it directly.
+                </i>
+              </p>
             </label>
+            
             <input type="text" id="amount" v-model="amount" placeholder="Enter Amount..." />
           </div>
           <div class="add-form-button">
@@ -54,41 +70,43 @@ const onSubmit = () => {
 
 <style scoped>
 .add{
-  width:100%;
-  min-width:max-content;
   display:flex;
   flex-direction: column;
+  margin:0 20px 20px 20px;
+  border:1px solid blue;
 }
 
 .add-header{
   font-weight:600;
-
+  font-family: 'Lora', sans-serif;
+  color:#121212;
 }
-.add-form{
-  margin:20px auto;
-}
-
 .add-form-control{
   display: flex;
   flex-direction: column;
   margin:16px auto;
 }
 
-.add-form-control label{
-  margin-bottom:8px;
+.add-form-control label span{
   text-transform: uppercase;
-  font-weight:600;
+  font-weight:500;
+  font-size:14px;
+  font-family: 'Lora', sans-serif;
+}
 
+.add-form-control label p{
+  font-weight:400;
+  font-size:12px;
+  font-family:'Oxanium', serif;
 }
 
 .add-form-control input{
-  width:100%;
   height:44px;
   border:none;
   outline:none;
   border-radius:4px;
   border-bottom:4px solid cadetblue;
-  background-color: whitesmoke;
+  background-color: snow;
 }
 
 .add-form-button{
