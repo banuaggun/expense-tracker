@@ -83,6 +83,7 @@ const onSubmit = () => {
   font-weight:600;
   font-family: 'Lora', sans-serif;
   color:#121212;
+  font-size:1.1rem
 }
 .add-form-control{
   display: flex;
@@ -230,11 +231,69 @@ input[type="text"] {
   border:none;
   outline:none;
   padding:16px 0px;
-  width:80%;
+  width:100%;
   border-radius:4px;
-  font-size:1.2rem;
+  font-size:1.1rem;
+  font-family:'Oxanium', sans-serif;
   font-weight:600;
   text-transform: uppercase;
-  background-color: lightseagreen;
+  background-color: lightskyblue;
 }
+
+.add-form-button button:hover,
+.add-form-button button.active{
+  background-color: cadetblue;
+  transition:all 0.2s ease;
+}
+
+/* responsive */
+
+@media only screen and (min-width:450px) and (max-width:700px){
+  .add{
+    margin:0 60px 20px 60px;
+  }
+}
+@media only screen and (min-width:701px) and (max-width:820px){
+  .add{
+    width:60%;
+    margin:20px auto;
+  }
+  .add-header{
+    font-size:1.2rem;
+  }
+  .add-form-control label{
+    font-size:1rem;
+  }
+  input[type="text"]{
+    font:14/24px 'Oxanium', sans-serif;
+  }
+  .add-form-info p{
+    font-size:14px;
+  }
+  .add-form-button button{
+    font-size:1.2rem;
+  }
+}
+@media only screen and (min-width:821px) and (max-width:1200px){
+  .add{
+    margin:20px;
+    border:1px solid green;
+  }
+  .add-header{
+    font-size:1.2rem;
+  }
+  .add-form-control label{
+    font-size:1rem;
+  }
+  input[type="text"]{
+    font:14/24px 'Oxanium', sans-serif;
+  }
+  .add-form-info p{
+    font-size:14px;
+  }
+  .add-form-button button{
+    font-size:1.2rem;
+  }
+}
+/* responsive */
 </style>
