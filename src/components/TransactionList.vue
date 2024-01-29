@@ -68,7 +68,6 @@ const deleteTransaction = (id) => {
 <style>
 .transaction{
     margin:0 20px 20px 20px;
-    border:1px solid green;
 }
 .transaction-header{
     font-size: 18px;
@@ -86,7 +85,6 @@ const deleteTransaction = (id) => {
     margin-top:20px;
 }
 .transaction-area-list-item ul{
-    border:1px solid violet;
     width:100%;
     margin:10px 0 20px 0;
     padding:0;
@@ -161,6 +159,9 @@ const deleteTransaction = (id) => {
   .transaction-area-list-header span{
     font-size:16px;
   }
+  .transaction-area-list-item ul li{
+      margin:10px 0 10px 0;
+  }
   .transaction-area-list-item .item{
     font-size:16px;
   }
@@ -172,11 +173,10 @@ const deleteTransaction = (id) => {
   }
   .transaction-area-list{
       width:45%;
-      border:1px solid green;
   }
   .list-1,
   .list-2{
-      margin-top:20px;
+      margin-top:16px;
   }
 }
 

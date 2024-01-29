@@ -29,9 +29,7 @@
   </div>
 </template>
 <style>
-span, a{
-  color:#121212;
-}
+
 .header{
   display: none;
 }
@@ -39,7 +37,6 @@ span, a{
 .header-mobile{
   background-color:snow;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
-  color:#121212;
   font-family:'Lora', sans-serif;
 }
 .header-content-left span,
@@ -49,14 +46,18 @@ span, a{
 }
 .header-content-right a,
 .header-mobile-content-bottom a{
-  font-weight:400;
+  font-weight:500;
   border-bottom:3px solid transparent;
   width:max-content;
 }
 .header-mobile{
   display:block;
+  width:100%;
+  z-index:10;
   height:80px;
-  position:sticky;
+  position:fixed;
+  top:0;
+  margin-bottom:200px;
 }
 .header-mobile-content-top{
   width:100%;
@@ -80,7 +81,8 @@ span, a{
   font-size:14px;
 }
 .header-content-right a:hover{
-  border-bottom:3px solid blue;
+  color:olivedrab;
+  border-bottom:3px solid olivedrab;
 }
 @media only screen and (min-width:700px) and (max-width:1940px){
   .header-mobile{

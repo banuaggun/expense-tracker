@@ -81,9 +81,9 @@ const onSubmit = () => {
 }
 .add-header{
   font-weight:600;
-  font-family: 'Lora', sans-serif;
+  font-family: 'Lora', serif;
   color:#121212;
-  font-size:1.1rem
+  font-size:18px;
 }
 .add-form-control{
   display: flex;
@@ -233,7 +233,7 @@ input[type="text"] {
   padding:16px 0px;
   width:100%;
   border-radius:4px;
-  font-size:1.1rem;
+  font-size:16px;
   font-family:'Oxanium', sans-serif;
   font-weight:600;
   text-transform: uppercase;
@@ -259,7 +259,7 @@ input[type="text"] {
     margin:20px auto;
   }
   .add-header{
-    font-size:1.2rem;
+    font-size:22px;
   }
   .add-form-control label{
     font-size:1rem;
@@ -271,19 +271,18 @@ input[type="text"] {
     font-size:14px;
   }
   .add-form-button button{
-    font-size:1.2rem;
+    font-size:18px;
   }
 }
-@media only screen and (min-width:821px) and (max-width:1200px){
+@media only screen and (min-width:821px) and (max-width:1940px){
   .add{
-    margin:20px;
-    border:1px solid green;
+    margin:0px 20px 40px 20px;
   }
   .add-header{
-    font-size:1.2rem;
+    font-size:26px;
   }
   .add-form-control label{
-    font-size:1rem;
+    font-size:16px;
   }
   input[type="text"]{
     font:14/24px 'Oxanium', sans-serif;
@@ -292,7 +291,7 @@ input[type="text"] {
     font-size:14px;
   }
   .add-form-button button{
-    font-size:1.2rem;
+    font-size:22px;
   }
 }
 /* responsive */
