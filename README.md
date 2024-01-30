@@ -23,3 +23,5 @@ This project is a web application that allows users to easily track their income
 > Vue Toastification
 
 > Phosphor Icons
+
+![ExpenseTracker](./public/screenshots/ExpenseTracker.jpeg)
